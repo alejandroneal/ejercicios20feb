@@ -29,4 +29,6 @@ public class EjercicioB {
                        """.formatted(palabra, palabra.length());
         JOptionPane.showMessageDialog(null, texto);
     }
+    
+    
 }

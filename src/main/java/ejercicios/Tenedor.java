@@ -5,10 +5,16 @@
 package ejercicios;
 
 /**
- * Clase padre: botella
- * Hijas: agua, alcohol
- * Método abstracto: servir
+ *
+ * @author Alejandro
  */
-public class Botella {
+public class Tenedor extends Cubierto {
+
+    private int puntas;
+    
+    @Override
+    public void limpiar() {
+        setLimpio(true);
+    }
     
 }

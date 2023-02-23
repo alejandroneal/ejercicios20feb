@@ -21,7 +21,7 @@ public class MainEjC {
         Cubierto c3 = new Cuchillo("dentado", "acero", true);
         Cubierto c4 = new Cuchillo("liso", "plástico", false);
         Cubierto c5 = new Tenedor(4, "acero", false);
-        Cubierto c6 = new Cuchillo("dentado", "plástico", true);
+        Cubierto c6 = new Cuchillo("dentado", "metal", true);
         
         //Insertar los datos de las clases hijas en una lista de la clase padre es una conversión implícita
         lista.add(c1);

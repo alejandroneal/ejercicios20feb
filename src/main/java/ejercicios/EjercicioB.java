@@ -29,8 +29,13 @@ public class EjercicioB {
             System.out.print (posicion + " ");
         }
         System.out.println("");
+        
+         valoresUnicode(palabra);
+         System.out.println("");
+         devolverCadenaSinEspacios(palabra);
     }
-    
+    //==========================================================
+    //==========================================================
     public static String pedirPalabra(){
         return JOptionPane.showInputDialog("Introduce una palabra");
     }
@@ -86,9 +91,25 @@ public class EjercicioB {
         //indicar si es mayuscula, minuscula o dígito
         //Quitar espacios si los hay
         String palabraSinEspacio = palabra.replace(" ", "");
+        int valorUnicode;
         
         for (int i = 0; i < palabraSinEspacio.length(); i++) {
+            valorUnicode = palabraSinEspacio.charAt(i);
             
+            if (valorUnicode >= 'a' && valorUnicode <= 'z') {
+                System.out.println("El valor unicode de " + palabraSinEspacio.charAt(i) + " es: " + valorUnicode + " y es minúscula");
+            } else if (valorUnicode >= 'A' && valorUnicode <= 'Z') {
+                System.out.println("El valor unicode de " + palabraSinEspacio.charAt(i) + " es: " + valorUnicode + " y es mayúscula");
+            } else {
+                System.out.println("El valor unicode de " + palabraSinEspacio.charAt(i) + " es: " + valorUnicode + " y es un dígito");
+            }
         }
+    }
+    
+    public static void devolverCadenaSinEspacios(String palabra){
+        String palabraSinEspacio = palabra.replace(" ", "");
+        
+        System.out.println("La nueva cadena es: " + palabraSinEspacio);
+        System.out.println("Y su tamaño es tamaño " + palabraSinEspacio.length());
     }
 }

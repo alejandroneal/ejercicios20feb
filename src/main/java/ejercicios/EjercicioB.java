@@ -82,6 +82,13 @@ public class EjercicioB {
     }
     
     public static void valoresUnicode(String palabra){
+        //Recorrer cada char del string e imprimir su valor unicode
+        //indicar si es mayuscula, minuscula o dígito
+        //Quitar espacios si los hay
+        String palabraSinEspacio = palabra.replace(" ", "");
         
+        for (int i = 0; i < palabraSinEspacio.length(); i++) {
+            
+        }
     }
 }

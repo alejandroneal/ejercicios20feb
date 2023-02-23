@@ -6,31 +6,31 @@ package ejercicios;
 
 /**
  *
- * @author Alejandro
+ * @author alejandro
  */
-public class Tenedor extends Cubierto {
+public class Cuchillo extends Cubierto{
 
-    private int puntas;
+    private String tipoFilo;
 
-    public Tenedor() {
+    public Cuchillo() {
     }
 
-    public Tenedor(int puntas, String material, boolean limpio) {
+    public Cuchillo(String tipoFilo, String material, boolean limpio) {
         super(material, limpio);
-        this.puntas = puntas;
+        this.tipoFilo = tipoFilo;
     }
 
     @Override
     public String toString() {
         String tmp = super.toString();
-        return tmp + ", puntas= " + this.puntas;
+        return tmp + ", tipo de filo=" + this.tipoFilo;
+    }
+    
+    public void cortar(){
     }
     
     @Override
     public void limpiar() {
         setLimpio(true);
-    }
-    
-    public void pinchar(){
     }
 }

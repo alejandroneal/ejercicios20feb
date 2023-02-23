@@ -8,7 +8,7 @@ package ejercicios;
  *
  * @author Alejandro
  */
-public abstract class Cubierto {
+public abstract class Cubierto{
     
     private String material;
     private boolean limpio;
@@ -19,6 +19,15 @@ public abstract class Cubierto {
     public Cubierto(String material, boolean limpio) {
         this.material = material;
         this.limpio = limpio;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    @Override
+    public String toString() {
+        return "Cubierto{" + "material=" + material + ", limpio=" + limpio + '}';
     }
 
     public void setLimpio(boolean limpio) {

@@ -16,20 +16,20 @@ import java.util.List;
 public class MainEjC {
     public static void main(String[] args) {
         List<Cubierto> lista = new ArrayList<>();
-        Cubierto c1 = new Tenedor(3, "acero", false);
-        Cubierto c2 = new Tenedor(4, "plástico", true);
-        Cubierto c3 = new Cuchillo("dentado", "acero", true);
-        Cubierto c4 = new Cuchillo("liso", "plástico", false);
-        Cubierto c5 = new Tenedor(4, "acero", false);
-        Cubierto c6 = new Cuchillo("dentado", "metal", true);
+        Cubierto t1 = new Tenedor(3, "acero", false);
+        Cubierto t2 = new Tenedor(4, "plástico", true);
+        Cubierto c1 = new Cuchillo("dentado", "acero", true);
+        Cubierto c2 = new Cuchillo("liso", "plástico", false);
+        Cubierto t3 = new Tenedor(4, "acero", false);
+        Cubierto c3 = new Cuchillo("dentado", "metal", true);
         
         //Insertar los datos de las clases hijas en una lista de la clase padre es una conversión implícita
+        lista.add(t1);
+        lista.add(t2);
         lista.add(c1);
         lista.add(c2);
+        lista.add(t3);
         lista.add(c3);
-        lista.add(c4);
-        lista.add(c5);
-        lista.add(c6);
         
         for (Cubierto cubierto : lista) {
             System.out.println(cubierto.toString());
@@ -51,7 +51,7 @@ public class MainEjC {
         
         System.out.println("--------------------------------------------------------");
         System.out.println("Búsqueda binaria");
-        int posicion = Collections.binarySearch(lista, c6,tipoMaterial);
+        int posicion = Collections.binarySearch(lista, c3,tipoMaterial);
         System.out.println("El cuchillo de plástico liso está en la posición: " + posicion);
     }
 }

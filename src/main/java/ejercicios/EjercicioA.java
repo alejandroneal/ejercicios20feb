@@ -22,7 +22,7 @@ public class EjercicioA {
         char[] array = meterNumeroEnArray(numero);
         
         //Comprovamos si el nº es introducido en el array es capicúo
-        boolean capicuo = comprobarCapicuo(array, 0, array.length - 1);
+        boolean capicuo = comprobarCapicuo(array, 0);
         JOptionPane.showMessageDialog(null, "¿El número " + numero + " es capicúo?: " + capicuo);
     }
     
@@ -50,18 +50,13 @@ public class EjercicioA {
         return array;
     }
     
-    public static boolean comprobarCapicuo(char [] array, int posicionInicio, int posicionFinal){
-        if (posicionInicio != 0 || posicionFinal != array.length - 1 || array[posicionInicio] != array[posicionFinal]) {
-            return false;
-        }
+    public static boolean comprobarCapicuo(char [] array, int posicion){
         
-        if (posicionInicio <= posicionFinal) {
-            if (array[posicionFinal] == array[posicionInicio]) {
-                return true;
-            } else {
-                return comprobarCapicuo(array, posicionInicio++, posicionFinal--);
-            }
-        } 
+        if (posicion >= array.length/2) {
+            return true;
+        } else if (array[posicion] == array[array.length - posicion - 1]) {
+            return comprobarCapicuo(array, ++posicion);
+        }
         return false;
     }
 }

@@ -23,7 +23,7 @@ public class EjercicioB {
         
         mostrarPosicionLetra(letra, palabra);
         
-        List<Integer> posiciones = posicionesChar(letra, palabra);
+        int[] posiciones = posicionesChar(letra, palabra);
         System.out.println("El char " + letra + " se encuentra en las posiciones:");
         for (Integer posicion : posiciones) {
             System.out.print (posicion + " ");
@@ -74,7 +74,7 @@ public class EjercicioB {
     
     //Devolver un array con las posiciones en las cuales se encuentren 
     //el char introducido como parámetro
-    public static List<Integer> posicionesChar(char letra, String palabra){
+    public static int [] posicionesChar(char letra, String palabra){
         List<Integer> posiciones = new ArrayList<>();
         
         for (int i = 0; i < palabra.length(); i++) {
@@ -83,7 +83,12 @@ public class EjercicioB {
             }
         }
         
-        return  posiciones;
+        int[] array = new int[posiciones.size()];
+        
+        for (int i = 0; i < array.length; i++) {
+            array[i] = posiciones.get(i);
+        }
+        return  array;
     }
     
     public static void valoresUnicode(String palabra){
